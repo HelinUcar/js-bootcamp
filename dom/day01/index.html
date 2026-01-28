@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 1 - Todo + Validation + Delete (Event Delegation)</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class='paper'>
+        <form id="taskForm">
+            <div class="task-form">
+                <div class="left">
+                    <div class="form-input">
+                        <label for="task">To-Do:</label>
+                        <input type="text" id="task" required>
+                    </div>
+                    <button type="submit" class="add-btn add-btn--tab">
+                        Add
+                    </button>
+
+
+
+
+                </div>
+                <div class="right">
+                    <label for="date">Date:</label>
+                    <div class="date">
+                        <div id="day"></div>
+                        <div id="month"></div>
+                        <div id="year"></div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <h1 class="title">To-Do List</h1>
+        <ul class="todo-list" id="todoList">
+            <li class="todo-item">
+             
+            </li>
+
+          
+        </ul>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
