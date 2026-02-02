@@ -6,18 +6,21 @@ Bu döküman, dizi ve metin manipülasyonu, hash mapping ve matematiksel optimiz
 
 ## 📌 Contents
 
-- [Dizideki En Büyük Sayıyı Bulma](#1-dizideki-en-büyük-sayıyı-bulma)
-- [Dizideki En Küçük Sayıyı Bulma](#2-dizideki-en-küçük-sayıyı-bulma)
-- [Dizi Elemanlarının Toplamı](#3-dizi-elemanlarının-toplamı)
-- [String Ters Çevirme](#4-string-ters-çevirme)
-- [Kelime Sayısını Hesaplama](#5-kelime-sayısını-hesaplama)
-- [Karakter Frekans Haritası](#6-karakter-frekans-haritası)
-- [Tekrar Etmeyen İlk Karakter](#7-tekrar-etmeyen-ilk-karakter)
-- [İki Dizinin Kesişimi](#8-iki-dizinin-kesişimi)
-- [Doğrusal Arama (Linear Search)](#9-doğrusal-arama-linear-search)
-- [Hedef İndeksi Bulma](#10-hedef-indeksi-bulma)
-- [Anagram Kontrolü](#11-anagram-kontrolü)
-- [Tekrar Edenleri Kaldırma](#12-tekrar-edenleri-kaldırma)
+1. [Valid Palindrome: Two Pointers Algorithm](#1-valid-palindrome-two-pointers-algorithm)
+2. [Max Character Algorithm (En Sık Geçen Karakter)](#2-max-character-algorithm-en-sık-geçen-karakter)
+3. [Two Strings Common Character (İki String Ortak Karakter Var mı?)](#3-two-strings-common-character-iki-string-ortak-karakter-var-mı)
+4. [Substring Count (Alt Dizi Sayma)](#4-substring-count-alt-dizi-sayma)
+5. [Duplicate Check (Set & O(1) Space Complexity)](#5-duplicate-check-set--o1-space-complexity-bellek-dostu)
+6. [Two Sum Algoritması (Hash Map & Two Pointers)](#6-two-sum-algoritması)
+7. [Remove Element (In-Place / Yerinde Değiştirme)](#7-remove-element-in-place--yerinde-değiştirme)
+8. [Maximum Subarray (Temel / Brute Force Yaklaşımı)](#8-maximum-subarray-temel--brute-force-yaklaşımı)
+9. [Rotate Array (Diziyi Döndürme)](#9-rotate-array-diziyi-döndürme)
+10. [Array Intersection (Set Kullanarak)](#10-array-intersection-set-kullanarak)
+11. [Normalize Anagram (Frekans Sayacı)](#11-normalize-anagram-frekans-sayacı)
+12. [First Non-Repeating Character](#12-first-non-repeating-character)
+13. [Frequency Map (Frekans Haritası Deseni)](#13-frequency-map-frekans-haritası-deseni)
+14. [Group Anagrams (Challenge)](#14-group-anagrams-challenge)
+15. [Missing Number (0..n)](#15-missing-number-0n)
 
 ---
 
