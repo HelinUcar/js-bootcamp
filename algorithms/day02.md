@@ -6,21 +6,21 @@ Bu döküman, dizi ve metin manipülasyonu, hash mapping ve matematiksel optimiz
 
 ## 📌 Contents
 
-1. [Valid Palindrome: Two Pointers Algorithm](#1-valid-palindrome-two-pointers-algorithm)
-2. [Max Character Algorithm (En Sık Geçen Karakter)](#2-max-character-algorithm-en-sık-geçen-karakter)
-3. [Two Strings Common Character (İki String Ortak Karakter Var mı?)](#3-two-strings-common-character-iki-string-ortak-karakter-var-mı)
-4. [Substring Count (Alt Dizi Sayma)](#4-substring-count-alt-dizi-sayma)
-5. [Duplicate Check (Set & O(1) Space Complexity)](#5-duplicate-check-set--o1-space-complexity-bellek-dostu)
-6. [Two Sum Algoritması (Hash Map & Two Pointers)](#6-two-sum-algoritması)
-7. [Remove Element (In-Place / Yerinde Değiştirme)](#7-remove-element-in-place--yerinde-değiştirme)
-8. [Maximum Subarray (Temel / Brute Force Yaklaşımı)](#8-maximum-subarray-temel--brute-force-yaklaşımı)
-9. [Rotate Array (Diziyi Döndürme)](#9-rotate-array-diziyi-döndürme)
-10. [Array Intersection (Set Kullanarak)](#10-array-intersection-set-kullanarak)
-11. [Normalize Anagram (Frekans Sayacı)](#11-normalize-anagram-frekans-sayacı)
+1. [Valid Palindrome](#1-valid-palindrome)
+2. [Max Character](#2-max-character)
+3. [Common Character Check](#3-common-character-check)
+4. [Substring Count](#4-substring-count)
+5. [Duplicate Check](#5-duplicate-check)
+6. [Two Sum](#6-two-sum)
+7. [Remove Element](#7-remove-element)
+8. [Maximum Subarray](#8-maximum-subarray)
+9. [Rotate Array](#9-rotate-array-diziyi-döndürme)
+10. [Array Intersection](#10-array-intersection)
+11. [Normalize Anagram](#11-normalize-anagram)
 12. [First Non-Repeating Character](#12-first-non-repeating-character)
-13. [Frequency Map (Frekans Haritası Deseni)](#13-frequency-map-frekans-haritası-deseni)
-14. [Group Anagrams (Challenge)](#14-group-anagrams-challenge)
-15. [Missing Number (0..n)](#15-missing-number-0n)
+13. [Frequency Map Pattern](#13-frequency-map-pattern)
+14. [Group Anagrams](#14-group-anagrams)
+15. [Missing Number](#15-missing-number)
 
 ---
 
@@ -309,15 +309,15 @@ const firstNonRepeating = (str) => {
 
 ```js
 const getFrequencyMap = (collection) => {
-    const map = {};
-    for (let item of collection) {
-        map[item] = (map[item] || 0) + 1;
-    }
-    return map;
+  const map = {};
+  for (let item of collection) {
+    map[item] = (map[item] || 0) + 1;
+  }
+  return map;
 };
 ```
 
-**Zaman Karmaşıklığı:** O(n) →  Veriyi bir kez geçeriz.
+**Zaman Karmaşıklığı:** O(n) → Veriyi bir kez geçeriz.
 **Alan Karmaşıklığı:** O(k) → k: benzersiz karakter sayısı kadar yer tutar.
 
 ---
@@ -328,34 +328,35 @@ const getFrequencyMap = (collection) => {
 
 ```js
 const groupAnagrams = (strs) => {
-    const groups = {};
-    for (let str of strs) {
-        const sortedKey = str.split('').sort().join('');
-        if (!groups[sortedKey]) groups[sortedKey] = [];
-        groups[sortedKey].push(str);
-    }
-    return Object.values(groups);
+  const groups = {};
+  for (let str of strs) {
+    const sortedKey = str.split("").sort().join("");
+    if (!groups[sortedKey]) groups[sortedKey] = [];
+    groups[sortedKey].push(str);
+  }
+  return Object.values(groups);
 };
 ```
 
-**Zaman Karmaşıklığı:** O(n * k log k) → n: kelime sayısı, k: en uzun kelimenin boyutu.
-**Alan Karmaşıklığı:** O(n * k) → Tüm kelimeleri Map içinde sakladığımız için.
+**Zaman Karmaşıklığı:** O(n _ k log k) → n: kelime sayısı, k: en uzun kelimenin boyutu.
+**Alan Karmaşıklığı:** O(n _ k) → Tüm kelimeleri Map içinde sakladığımız için.
 
 ---
 
 ## 15) Missing Number
 
-**Soru:** 0'dan n'e kadar sayıları içeren bir dizide bir sayı eksiktir. 
+**Soru:** 0'dan n'e kadar sayıları içeren bir dizide bir sayı eksiktir.
+
 ```js
 const missingNumberSum = (nums) => {
-    const n = nums.length;
-    const expectedSum = (n * (n + 1)) / 2;
-    const actualSum = nums.reduce((acc, curr) => acc + curr, 0);
-    return expectedSum - actualSum;
+  const n = nums.length;
+  const expectedSum = (n * (n + 1)) / 2;
+  const actualSum = nums.reduce((acc, curr) => acc + curr, 0);
+  return expectedSum - actualSum;
 };
 ```
 
-**Zaman Karmaşıklığı:** O(n) 
+**Zaman Karmaşıklığı:** O(n)
 **Alan Karmaşıklığı:** O(1) → En verimli yol!
 
 ---
